@@ -1,3 +1,5 @@
+import { Roles } from './enums/roles';
+
 export type Role = 'MANAGER' | 'WRITER' | 'READER' | 'CLIENT';
 
 export interface User {
@@ -15,31 +17,31 @@ export const admin: User = {
 export const manager: User = {
   name: 'manager',
   isAdmin: false,
-  roles: ['MANAGER'],
+  roles: [Roles.Manager],
 };
 
 export const writer: User = {
   name: 'writer',
   isAdmin: false,
-  roles: ['WRITER'],
+  roles: [Roles.Writer],
 };
 
 export const reader: User = {
   name: 'reader',
   isAdmin: false,
-  roles: ['READER'],
+  roles: [Roles.Reader],
 };
 
 export const readerAndWriter: User = {
   name: 'reader',
   isAdmin: false,
-  roles: ['READER', 'WRITER'],
+  roles: [Roles.Reader, Roles.Writer],
 };
 
 export const client: User = {
   name: 'client',
   isAdmin: false,
-  roles: ['CLIENT'],
+  roles: [Roles.Client],
 };
 
 export const everyone: User = {
