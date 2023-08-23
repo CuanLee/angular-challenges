@@ -31,8 +31,12 @@ import { UserStore } from './user.store';
 
     <app-information></app-information>
 
-    <button app-button class=" mt-10" routerLink="enter">
-      Enter application
+    <button app-button class=" mt-10" routerLink="enter-admin">
+      Enter Admin application
+    </button>
+
+    <button app-button class=" mt-10" routerLink="enter-manager">
+      Enter Manager application
     </button>
   `,
 })

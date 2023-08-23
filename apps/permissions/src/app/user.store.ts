@@ -11,7 +11,7 @@ export class UserStore {
 
   readonly isAdmin$ = this.user$?.pipe(map((user) => user?.isAdmin));
 
-  hasAnyRole(role: Role[]): Observable<boolean> {
+  hasRoles(role: Role[]): Observable<boolean> {
     return this.user$.pipe(
       map((user) => {
         return (

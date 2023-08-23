@@ -14,8 +14,8 @@ export class HasRoleDirective {
   @Input()
   set hasRoles(roles: Role[] | undefined) {
     if (roles && roles?.length > 0) {
-      this.store.hasAnyRole(roles).subscribe((hasRole) => {
-        hasRole ? this.addTemplate() : this.addElseTemplate();
+      this.store.hasRoles(roles).subscribe((hasRoles) => {
+        hasRoles ? this.addTemplate() : this.addElseTemplate();
       });
     }
   }
